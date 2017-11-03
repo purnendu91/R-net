@@ -229,7 +229,7 @@ def pad_data(data, max_word):
     padded_data = np.zeros((len(data),max_word),dtype = np.int32)
     for i,line in enumerate(data):
         for j,word in enumerate(line):
-	    if j >= max_word:
+	    if j >= max_word or j > 20:
 	        print("skipped a word")
 		continue
             padded_data[i,j] = word
