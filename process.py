@@ -227,7 +227,10 @@ def write_file(indices, dir_, separate = "\n"):
 
 def pad_data(data, max_word):
     padded_data = np.zeros((len(data),max_word),dtype = np.int32)
+    print data
     for i,line in enumerate(data):
+        print i
+        print line
         for j,word in enumerate(line):
 	    if j >= max_word or j > 20:
 	        print("skipped a word")
